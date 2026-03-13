@@ -3,10 +3,15 @@ import { useEffect } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CookieConsent } from "./CookieConsent";
+import { ScrollToTopButton } from "@/components/ui/ScrollToTop";
 import { ROUTE_TITLES } from "@/content/routeTitles";
 
 export function Layout() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   useEffect(() => {
     const basePath = location.pathname;
@@ -32,6 +37,7 @@ export function Layout() {
       </main>
       <Footer />
       <CookieConsent />
+      <ScrollToTopButton />
     </div>
   );
 }

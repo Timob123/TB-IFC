@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 interface HeroProps {
@@ -8,6 +9,15 @@ interface HeroProps {
 }
 
 export function Hero({ title, subtitle, variant = "full", backgroundImage }: HeroProps) {
+  const ctaButton = (
+    <Link
+      to="/contact"
+      className="inline-flex items-center px-6 py-3 bg-[var(--color-gold)] text-[var(--color-navy)] font-semibold rounded-md hover:bg-[var(--color-gold-light)] transition-colors mt-6"
+    >
+      Contact Us
+    </Link>
+  );
+
   if (variant === "compact") {
     return (
       <section className="relative bg-[var(--color-navy)] text-white py-16 lg:py-20 overflow-hidden">
@@ -16,10 +26,10 @@ export function Hero({ title, subtitle, variant = "full", backgroundImage }: Her
             <img
               src={backgroundImage}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover opacity-30"
+              className="absolute inset-0 w-full h-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-[var(--color-navy)]/80" />
+            <div className="absolute inset-0 bg-[var(--color-navy)]/45" />
           </>
         )}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,6 +51,7 @@ export function Hero({ title, subtitle, variant = "full", backgroundImage }: Her
               {subtitle}
             </motion.p>
           )}
+          {ctaButton}
         </div>
       </section>
     );
@@ -56,7 +67,7 @@ export function Hero({ title, subtitle, variant = "full", backgroundImage }: Her
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)]/60 via-[var(--color-navy)]/50 to-[var(--color-navy)]/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)]/40 via-[var(--color-navy)]/35 to-[var(--color-navy)]/40" />
         </>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[var(--color-navy-light)] to-[var(--color-navy)] opacity-90" />
@@ -76,6 +87,7 @@ export function Hero({ title, subtitle, variant = "full", backgroundImage }: Her
               {subtitle}
             </p>
           )}
+          {ctaButton}
         </motion.div>
       </div>
     </section>

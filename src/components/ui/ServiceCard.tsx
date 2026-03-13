@@ -39,9 +39,11 @@ export function ServiceCard({ title, description, href, icon, image, imageAlt, i
       <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-[var(--color-navy)] mb-2">
         {title}
       </h3>
-      <p className="text-[var(--color-slate)] text-sm leading-relaxed mb-4">
-        {description}
-      </p>
+      {description && (
+        <p className="text-[var(--color-slate)] text-sm leading-relaxed mb-4">
+          {description}
+        </p>
+      )}
       <Link
         to={href}
         className="inline-flex items-center text-[var(--color-gold)] font-medium text-sm hover:text-[var(--color-gold-light)] transition-colors"

@@ -10,7 +10,7 @@ export function Contact() {
         title="Contact IFC Finance"
         subtitle="Established Financial Advisors"
         variant="compact"
-        backgroundImage={IMAGES.dublinRiver}
+        backgroundImage={IMAGES.officeDesk}
       />
 
       <section className="py-16 lg:py-24">
@@ -64,19 +64,35 @@ export function Contact() {
           </div>
 
           <div className="mt-16">
-            <div className="flex flex-col md:flex-row gap-8 mb-8">
-              <div className="flex-1 rounded-lg overflow-hidden shadow-md aspect-video md:aspect-[16/9]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div className="rounded-lg overflow-hidden shadow-md aspect-video">
                 <img
-                  src={IMAGES.dublinBridge}
-                  alt="Dublin - Fitzwilliam Square area"
+                  src={IMAGES.dublinIFSC}
+                  alt="Dublin financial district"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <div className="flex-1 rounded-lg overflow-hidden shadow-md aspect-video md:aspect-[16/9]">
+              <div className="rounded-lg overflow-hidden shadow-md aspect-video">
                 <img
                   src={IMAGES.irishGreenField}
                   alt="Irish countryside"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md aspect-video">
+                <img
+                  src={IMAGES.businessHandshake}
+                  alt="Professional meeting"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-md aspect-video">
+                <img
+                  src={IMAGES.irishCliffs}
+                  alt="Cliffs of Moher"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

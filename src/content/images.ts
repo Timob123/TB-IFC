@@ -1,10 +1,17 @@
 /**
- * Real photos from Wikimedia Commons - 218K+ Dublin/Ireland images.
+ * Real photos from Wikimedia Commons - Dublin/Ireland + business imagery.
  * All verified URLs. Free under CC licenses. Attribution appreciated.
  * Browse more: https://commons.wikimedia.org/wiki/Category:Dublin
  *            https://commons.wikimedia.org/wiki/Category:Ireland
  */
 export const IMAGES = {
+  // Business & finance - Dublin IFSC, offices, meetings
+  dublinIFSC: "https://upload.wikimedia.org/wikipedia/commons/9/9d/IFSC_Dublin_Jan-2022.jpg",
+  dublinCitiHQ: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Citi_HQ_in_Dublin.jpg",
+  dublinAIBDocklands: "https://upload.wikimedia.org/wikipedia/commons/5/52/AIB_docklands.jpg",
+  businessHandshake: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Business_agreement_handshake_at_coffee_shop.jpg",
+  officeDesk: "https://upload.wikimedia.org/wikipedia/commons/6/60/Clean_minimalist_office_%28Unsplash%29.jpg",
+
   // Dublin - verified from Commons API
   dublinSpire: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Dublin_spire.jpg",
   dublinStephenGreen: "https://upload.wikimedia.org/wikipedia/commons/4/49/Dublin_Stephen%27s_Green-44_edit.jpg",

@@ -7,6 +7,7 @@ import path from 'path'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'IFSC.DC'}/` : '/',
   plugins: [react(), tailwindcss()],
   server: { port: 5173 },
   resolve: {

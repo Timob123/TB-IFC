@@ -16,7 +16,7 @@ export function GroupRisk() {
         title="Group Risk Solutions"
         description="IFC Finance are specialists in the area of Group Risk. We can help secure the best Group Risk Policies for Companies looking to take out Income and Life Assurance for their business. We have a dedicated website for Group Risk with special offers."
         links={[
-          { href: "/group-risk/life-income-protection", label: "Group Life and Income Protection Insurance" },
+          { href: "/group-risk/life-income-protection", label: "Group Life and Income Protection Insurance", image: IMAGES.dublinCitiHQ, imageAlt: "Group life and income protection" },
         ]}
       />
       <section className="py-12 bg-[var(--color-off-white)]">

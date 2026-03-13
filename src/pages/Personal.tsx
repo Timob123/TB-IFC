@@ -15,15 +15,15 @@ export function Personal() {
         title="Your Financial Future"
         description="Financial Planning is not a choice it is a necessity. At IFC Finance we can help you with all your Financial Planning needs. We look at areas such as Savings & Investments, Pensions, Life, Home & Travel Assurance."
         links={[
-          { href: "/personal/investing", label: "Investing" },
-          { href: "/personal/pension", label: "Pension" },
-          { href: "/personal/pension-calculator", label: "Pension Calculator" },
-          { href: "/personal/prsa", label: "PRSA" },
-          { href: "/personal/life-assurance", label: "Life Assurance" },
-          { href: "/personal/protection-products", label: "Protection Products" },
-          { href: "/personal/income-protection", label: "Income Protection" },
-          { href: "/personal/home-insurance", label: "Home Insurance" },
-          { href: "/personal/travel-insurance", label: "Travel Insurance" },
+          { href: "/personal/investing", label: "Investing", image: IMAGES.officeDesk, imageAlt: "Investments and savings" },
+          { href: "/personal/pension", label: "Pension", image: IMAGES.irishHills, imageAlt: "Retirement planning" },
+          { href: "/personal/pension-calculator", label: "Pension Calculator", image: IMAGES.irishGlendalough, imageAlt: "Plan your retirement" },
+          { href: "/personal/prsa", label: "PRSA", image: IMAGES.irishGreenField, imageAlt: "PRSA flexibility" },
+          { href: "/personal/life-assurance", label: "Life Assurance", image: IMAGES.dublinBullIsland, imageAlt: "Protect your family" },
+          { href: "/personal/protection-products", label: "Protection Products", image: IMAGES.irishCliffs, imageAlt: "Protection cover" },
+          { href: "/personal/income-protection", label: "Income Protection", image: IMAGES.businessHandshake, imageAlt: "Secure your income" },
+          { href: "/personal/home-insurance", label: "Home Insurance", image: IMAGES.dublinCastle, imageAlt: "Home and contents cover" },
+          { href: "/personal/travel-insurance", label: "Travel Insurance", image: IMAGES.irishRingOfKerry, imageAlt: "Travel with peace of mind" },
         ]}
       />
     </>

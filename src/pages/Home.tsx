@@ -25,8 +25,8 @@ const PILLARS = [
     title: "Company-Led Financial Planning",
     description: "IFC Finance advise on and manage Company Pensions, Group Risk, Partnership Insurance, Keyman Insurance, Co-Directors and Pension Term Insurance for companies all over Ireland and the UK.",
     href: "/company",
-    image: IMAGES.dublinCityscape,
-    imageAlt: "Dublin cityscape - River Liffey",
+    image: IMAGES.dublinIFSC,
+    imageAlt: "Dublin IFSC - financial district",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -95,8 +95,8 @@ export function Home() {
             <div>
               <div className="aspect-video rounded-lg overflow-hidden mb-8 shadow-md">
                 <img
-                  src={IMAGES.dublinCityscape}
-                  alt="Dublin street scene - where IFC Finance is based"
+                  src={IMAGES.businessHandshake}
+                  alt="Professional financial advice - IFC Finance"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

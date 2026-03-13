@@ -24,9 +24,12 @@ import { Privacy } from "@/pages/Privacy";
 // Service subpages
 import { ServiceSubpage } from "@/pages/ServiceSubpage";
 
+const base = import.meta.env.BASE_URL || "/";
+const basename = base === "/" ? undefined : base.replace(/\/$/, "");
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
