@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ServiceHub } from "@/components/sections/ServiceHub";
+import { IMAGES } from "@/content/images";
 
 export function Personal() {
   return (
@@ -8,6 +9,7 @@ export function Personal() {
         title="Personal Financial Planning"
         subtitle="Savings, Investments, Pensions & Protection"
         variant="compact"
+        backgroundImage={IMAGES.irishGreenField}
       />
       <ServiceHub
         title="Your Financial Future"

@@ -8,6 +8,10 @@ export function Header() {
   const location = useLocation();
 
   const isActive = (href: string) => location.pathname === href || location.pathname.startsWith(href + "/");
+  const isServicesActive = () =>
+    ["/financial-planning", "/personal", "/company", "/group-risk", "/invoice-finance"].some((p) =>
+      location.pathname === p || location.pathname.startsWith(p + "/")
+    );
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm" role="banner">
@@ -33,7 +37,7 @@ export function Header() {
                     <Link
                       to={item.href}
                       className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                        isActive(item.href) ? "text-[var(--color-gold)]" : "text-[var(--color-navy)] hover:text-[var(--color-gold)]"
+                        item.label === "Services" ? (isServicesActive() ? "text-[var(--color-gold)]" : "text-[var(--color-navy)] hover:text-[var(--color-gold)]") : isActive(item.href) ? "text-[var(--color-gold)]" : "text-[var(--color-navy)] hover:text-[var(--color-gold)]"
                       }`}
                     >
                       {item.label}
@@ -79,16 +83,6 @@ export function Header() {
               );
             })}
           </nav>
-
-          {/* Contact */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href={`tel:${SITE.contact.phoneRaw}`} className="text-sm text-[var(--color-navy)] hover:text-[var(--color-gold)]">
-              {SITE.contact.phone}
-            </a>
-            <a href={`mailto:${SITE.contact.email}`} className="text-sm text-[var(--color-navy)] hover:text-[var(--color-gold)]">
-              {SITE.contact.email}
-            </a>
-          </div>
 
           {/* Mobile menu button */}
           <button

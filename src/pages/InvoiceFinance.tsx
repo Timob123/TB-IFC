@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ServiceHub } from "@/components/sections/ServiceHub";
+import { IMAGES } from "@/content/images";
 
 export function InvoiceFinance() {
   return (
@@ -8,6 +9,7 @@ export function InvoiceFinance() {
         title="Invoice Finance"
         subtitle="Working Capital Finance for Companies"
         variant="compact"
+        backgroundImage={IMAGES.dublinBridge}
       />
       <ServiceHub
         title="Working Capital Solutions"

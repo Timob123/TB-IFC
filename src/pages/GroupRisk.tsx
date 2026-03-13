@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { ServiceHub } from "@/components/sections/ServiceHub";
 import { SITE } from "@/content/site";
+import { IMAGES } from "@/content/images";
 
 export function GroupRisk() {
   return (
@@ -9,6 +10,7 @@ export function GroupRisk() {
         title="Group Risk"
         subtitle="Group Life and Income Protection Insurance"
         variant="compact"
+        backgroundImage={IMAGES.irishCliffs}
       />
       <ServiceHub
         title="Group Risk Solutions"

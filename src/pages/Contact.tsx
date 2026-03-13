@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { SITE } from "@/content/site";
+import { IMAGES } from "@/content/images";
 
 export function Contact() {
   return (
@@ -9,6 +10,7 @@ export function Contact() {
         title="Contact IFC Finance"
         subtitle="Established Financial Advisors"
         variant="compact"
+        backgroundImage={IMAGES.dublinRiver}
       />
 
       <section className="py-16 lg:py-24">
@@ -62,6 +64,24 @@ export function Contact() {
           </div>
 
           <div className="mt-16">
+            <div className="flex flex-col md:flex-row gap-8 mb-8">
+              <div className="flex-1 rounded-lg overflow-hidden shadow-md aspect-video md:aspect-[16/9]">
+                <img
+                  src={IMAGES.dublinBridge}
+                  alt="Dublin - Fitzwilliam Square area"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex-1 rounded-lg overflow-hidden shadow-md aspect-video md:aspect-[16/9]">
+                <img
+                  src={IMAGES.irishGreenField}
+                  alt="Irish countryside"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
             <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-[var(--color-navy)] mb-4">
               Find Us
             </h3>

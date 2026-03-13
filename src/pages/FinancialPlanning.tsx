@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ServiceHub } from "@/components/sections/ServiceHub";
+import { IMAGES } from "@/content/images";
 
 export function FinancialPlanning() {
   return (
@@ -8,6 +9,7 @@ export function FinancialPlanning() {
         title="Financial Planning Benefits"
         subtitle="The benefits of professional financial advice"
         variant="compact"
+        backgroundImage={IMAGES.irishHills}
       />
       <ServiceHub
         title="Why Financial Planning Matters"

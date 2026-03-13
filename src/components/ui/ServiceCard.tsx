@@ -6,18 +6,31 @@ interface ServiceCardProps {
   description: string;
   href: string;
   icon?: React.ReactNode;
+  image?: string;
+  imageAlt?: string;
   index?: number;
 }
 
-export function ServiceCard({ title, description, href, icon, index = 0 }: ServiceCardProps) {
+export function ServiceCard({ title, description, href, icon, image, imageAlt, index = 0 }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-white rounded-lg border border-slate-200 p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-[var(--color-gold)]/30 transition-all duration-300"
+      className="group bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-[var(--color-gold)]/30 transition-all duration-300"
     >
+      {image && (
+        <div className="aspect-[16/10] overflow-hidden">
+          <img
+            src={image}
+            alt={imageAlt ?? title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      )}
+      <div className="p-6 lg:p-8">
       {icon && (
         <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[var(--color-navy)]/5 text-[var(--color-gold)] mb-4 group-hover:bg-[var(--color-gold)]/10 transition-colors">
           {icon}
@@ -38,6 +51,7 @@ export function ServiceCard({ title, description, href, icon, index = 0 }: Servi
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </Link>
+      </div>
     </motion.div>
   );
 }

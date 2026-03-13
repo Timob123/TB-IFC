@@ -4,13 +4,25 @@ interface HeroProps {
   title: string;
   subtitle?: string;
   variant?: "full" | "compact";
+  backgroundImage?: string;
 }
 
-export function Hero({ title, subtitle, variant = "full" }: HeroProps) {
+export function Hero({ title, subtitle, variant = "full", backgroundImage }: HeroProps) {
   if (variant === "compact") {
     return (
-      <section className="bg-[var(--color-navy)] text-white py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-[var(--color-navy)] text-white py-16 lg:py-20 overflow-hidden">
+        {backgroundImage && (
+          <>
+            <img
+              src={backgroundImage}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover opacity-30"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-[var(--color-navy)]/80" />
+          </>
+        )}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,8 +47,20 @@ export function Hero({ title, subtitle, variant = "full" }: HeroProps) {
   }
 
   return (
-    <section className="relative bg-[var(--color-navy)] text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[var(--color-navy-light)] to-[var(--color-navy)] opacity-90" />
+    <section className="relative bg-[var(--color-navy)] text-white overflow-hidden min-h-[28rem] lg:min-h-[32rem]">
+      {backgroundImage ? (
+        <>
+          <img
+            src={backgroundImage}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)]/60 via-[var(--color-navy)]/50 to-[var(--color-navy)]/60" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-navy)] via-[var(--color-navy-light)] to-[var(--color-navy)] opacity-90" />
+      )}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ServiceHub } from "@/components/sections/ServiceHub";
+import { IMAGES } from "@/content/images";
 
 export function Company() {
   return (
@@ -8,6 +9,7 @@ export function Company() {
         title="Company-Led Financial Planning"
         subtitle="Business Financial Planning Experts"
         variant="compact"
+        backgroundImage={IMAGES.dublinCityscape}
       />
       <ServiceHub
         title="Business Financial Solutions"

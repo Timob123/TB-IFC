@@ -11,6 +11,14 @@ npm run build   # production build
 npm run preview # preview production build
 ```
 
+## Images
+
+All images are **real photos** from [Wikimedia Commons](https://commons.wikimedia.org) (free, CC-licensed):
+- 218K+ Dublin/Ireland images
+- Verified direct URLs (Dublin Spire, Trinity College, Cliffs of Moher, Ring of Kerry, etc.)
+
+Optional: Add `VITE_PEXELS_API_KEY` for dynamic search via `src/lib/pexels.ts` (10.8K+ Dublin on Pexels).
+
 ## Forms
 
 Contact and callback forms support Formspree. Add to `.env`:
