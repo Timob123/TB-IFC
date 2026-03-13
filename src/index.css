@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Libre Baskerville", "Georgia", serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --color-navy: #1e3a5f;
+  --color-navy-light: #2c5282;
+  --color-gold: #c9a227;
+  --color-gold-light: #e6c04a;
+  --color-slate: #475569;
+  --color-off-white: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-navy);
+  background: white;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
